@@ -37,7 +37,7 @@ a {
     text-align: left;
     border-bottom: 1px solid;
     margin-bottom: 20px;
-} 
+}
 
 .dialog-header .dialog-close {
     float: right;
@@ -53,7 +53,7 @@ a {
     background-color: #333;
 }
 
-/*.masthead { 
+/*.masthead {
     z-index: 999;
 }*/
 
@@ -91,7 +91,7 @@ a {
     margin-top: 90px;
 }
 
-.site-wrapper { 
+.site-wrapper {
     width:100%;
     overflow:hidden;
     position: absolute;
@@ -271,11 +271,11 @@ a {
 .m-playbar .btns .play{
     width: 36px;
     height: 36px;
-    margin-top:0; 
+    margin-top:0;
     background-position: 0px 0px;
 }
 
-.m-playbar .btns .play:hover{ 
+.m-playbar .btns .play:hover{
     background-position: 0px -36px;
 }
 
@@ -283,7 +283,7 @@ a {
     background-position: -108px 0px;
 }
 
-.m-playbar .btns .pas:hover{ 
+.m-playbar .btns .pas:hover{
     background-position: -108px -36px;
 }
 
@@ -379,7 +379,7 @@ a {
 
 .m-pbar {
     position: relative;
-    
+
 }
 
 .m-pbar.play {
@@ -535,7 +535,7 @@ em, i {
     right: 0px;
     _right: 0px;
     height: 349px;
-    width: 100%;
+    width: 60%;
     background-color: #121212;
 }
 
@@ -544,7 +544,6 @@ em, i {
     padding-left: 0px;
     height: 308px;
     overflow-y: scroll;
-    width: 60%;
     margin-bottom: 0px;
 }
 
@@ -621,12 +620,35 @@ li {
     color: #ffffff;
 }
 
+.menu-header small {
+    background-color: #333333;
+    color: #ffffff;
+    cursor: pointer;
+    vertical-align: middle;
+    display:inline-block;
+    width: 60px;
+    line-height: 20px;
+}
+
+.menu-header a:hover small{
+    background-color: #ffffff;
+    color: #333333;
+}
+.menu .add-all {
+    display: inline-block;
+    position: absolute;
+    left: 335px;
+    top: 9px;
+}
+
+
 .menu .remove-all {
     display: inline-block;
     position: absolute;
-    left: 113px;
+    left: 410px;
     top: 9px;
 }
+
 
 .menu .close-popup {
     float:right;
@@ -715,79 +737,70 @@ li {
     max-height:100%;
 }
 
-.playlist-detail .detail-head-title {
+.detail-head-title {
     float: left;
     width: 100%;
     text-align: center;
 }
 
-.playlist-detail .detail-head-title a {
+.detail-head-title a {
     display: inline-block;
     text-indent: -9999px;
     width: 36px;
     height: 36px;
-    margin-right: 8px;
     margin-top: 0;
     background: url(../images/player_large.png) no-repeat 0 9999px;
 }
 
-.playlist-detail .detail-head-title .play {
+.detail-head-title .play {
     background-position: 0px 0px;
 }
 
-.playlist-detail .detail-head-title .play:hover {
+.detail-head-title .play:hover {
     background-position: 0px -36px;
 }
 
-.playlist-detail .detail-head-title .add {
+.detail-head-title .add {
     background-position: -216px 0px;
 }
 
-.playlist-detail .detail-head-title .add:hover {
+.detail-head-title .add:hover {
     background-position: -216px -36px;
 }
 
-.playlist-detail .detail-head-title .link {
-    background-position: -256px 0px;
+.detail-head-title .link {
+    background-position: -250px 0px;
 }
 
-.playlist-detail .detail-head-title .link:hover {
-    background-position: -256px -36px;
+.detail-head-title .link:hover {
+    background-position: -250px -36px;
 }
 
-.playlist-detail .detail-head-title .edit {
-    display: inline-block;
-    text-indent: -9999px;
-    width: 36px;
-    height: 36px;
-    margin-right: 8px;
-    margin-top: 0;
-    background: url(../images/player_large.png) no-repeat 0 9999px;
+.detail-head-title .edit {
     background-position: -288px 0px;
 }
 
-.playlist-detail .detail-head-title .edit:hover {
-    background: url(../images/player_large.png) no-repeat 0 9999px;
+.detail-head-title .edit:hover {
     background-position: -288px -36px;
 }
 
-.playlist-detail .detail-head-title .clone {
-    display: inline-block;
-    text-indent: -9999px;
-    width: 36px;
-    height: 36px;
-    margin-right: 8px;
-    margin-top: 0;
-    background: url(../images/player_large.png) no-repeat 0 9999px;
+.detail-head-title .clone {
     background-position: -144px 0px;
 }
 
-.playlist-detail .detail-head-title .clone:hover {
-    background: url(../images/player_large.png) no-repeat 0 9999px;
+.detail-head-title .clone:hover {
     background-position: -144px -36px;
 }
 
-.playlist-detail .detail-head-title .ply:hover {
+.detail-head-title .merge {
+    background-position: -324px 0px;
+}
+
+.detail-head-title .merge:hover {
+    background-position: -324px -36px;
+}
+
+.detail-head-title .ply:hover {
     background-position: -40px -204px;
 }
 
@@ -800,6 +813,67 @@ li {
     margin-left: 220px;
     margin-top: 6px;
     margin-right: 14px;
+}
+
+.playsong-detail .detail-head {
+    width: 390px;
+    position: fixed;
+    margin-bottom: 20px;
+}
+
+.playsong-detail .detail-songinfo {
+    padding-left: 440px;
+    padding-right: 55px;
+} 
+
+.playsong-detail .detail-head .detail-head-cover {
+    margin: 0 auto;
+    width: 200px;
+}
+
+.playsong-detail .detail-head .detail-head-cover img {
+    width: 240px;
+    height: 240px;
+}
+
+.playsong-detail .detail-songinfo h2 {
+    font-size: 22px;
+}
+
+.playsong-detail .detail-songinfo .info {
+    border-bottom: solid #444 1px;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+}
+.playsong-detail .detail-songinfo .info span{
+    color: #9b9b9b;
+    margin-right: 10px;
+}
+.playsong-detail .detail-songinfo .info span.album {
+    margin-left: 30px;
+}
+.playsong-detail .lyric {
+    color: #999; /* IE8 proofing */
+    color: rgba(255,255,255,.5);
+    text-align: left;
+    width: 100%;
+    display: inline-block;
+    height: 410px;
+    overflow-y: scroll;
+    position: relative;
+    font-size: 15px;
+}
+
+.playsong-detail .lyric p{
+    min-height: 20px;
+}
+
+.playsong-detail .lyric .placeholder{
+    height: 50px;
+}
+
+.playsong-detail .lyric .highlight{
+    color: #ffffff;
 }
 
 .detail-songlist {
@@ -889,7 +963,7 @@ li {
 }
 
 .detail-songlist .detail-artist a{
-    color: #777777;   
+    color: #777777;
 }
 
 .detail-songlist .odd {
@@ -957,6 +1031,60 @@ li {
     font-size: 17px;
 }
 
+
+.dialog-backuplist {
+    padding-left: 0px;
+    text-align: left;
+}
+
+.dialog-backuplist li {
+    cursor: pointer;
+    height: 112px;
+    padding: 6px;
+}
+
+.dialog-backuplist li:hover {
+    background-color: #555555;
+}
+
+.dialog-backuplist li img {
+    float: left;
+    height: 100px;
+    width: 100px;
+}
+
+.dialog-backuplist li h2{
+    margin-top: 10px;
+    margin-left: 125px;
+    font-size: 15px;
+}
+
+.dialog-merge-playlist {
+    padding-left: 0px;
+    text-align: left;
+}
+
+.dialog-merge-playlist li {
+    cursor: pointer;
+    height: 112px;
+    padding: 6px;
+}
+
+.dialog-merge-playlist li:hover {
+    background-color: #555555;
+}
+
+.dialog-merge-playlist li img {
+    float: left;
+    height: 100px;
+    width: 100px;
+}
+
+.dialog-merge-playlist li h2{
+    margin-left: 125px;
+    font-size: 17px;
+}
+
 .dialog-newplaylist input{
     margin-bottom: 22px;
 }
@@ -964,6 +1092,14 @@ li {
 .dialog-newplaylist .confirm-button {
     margin-left: 76px;
     margin-right: 96px;
+}
+
+.dialog-newbackup {
+    text-align: center;
+}
+
+.dialog-newbackup .confirm-button {
+    margin-right: 12px;
 }
 
 .dialog-editplaylist .dialog-footer {
@@ -1040,6 +1176,11 @@ li {
 
 .settings-content {
     padding: 20px;
+
+}
+
+.settings-content .btn {
+    margin-right: 10px;
 }
 
 .btn-group button,.btn-pagination,.btn-pagination:focus {

@@ -1,21 +1,47 @@
 {
     "background": {
-        "presistent": true,
-        "scripts": ["js/background.js" ]
+        "scripts": ["js/vendor/jquery-3.3.1.min.js", "js/github_api.js","js/background.js" ]
     },
     "browser_action": {
         "default_icon": "images/logo.png",
         "default_title": "Listen 1"
     },
-    "description": "Listen 1 for all music",
+    "description": "One for all free music in China",
     "icons": {
         "128": "images/logo.png",
-        "16": "images/logo.png",
-        "48": "images/logo.png"
+        "16": "images/logo_16.png",
+        "48": "images/logo_48.png"
     },
     "manifest_version": 2,
     "name": "Listen 1",
-    "permissions": [ "notifications", "unlimitedStorage", "downloads", "storage", "contextMenus", "tabs", "*://music.163.com/*", "*://*.xiami.com/*", "*://*.qq.com/*", "webRequest", "webRequestBlocking"],
-    "version": "1.2.4",
-    "web_accessible_resources": [ "images/*" ]
+    "permissions": [ "notifications", "unlimitedStorage", "downloads", "storage", "contextMenus", "tabs", "cookies", "*://music.163.com/*", "*://*.xiami.com/*", "*://*.qq.com/*", "*://*.kugou.com/", "*://*.kuwo.cn/", "*://*.bilibili.com/*", "*://*.migu.cn/*", "*://api.github.com/*", "*://github.com/*", "*://gist.githubusercontent.com/*", "webRequest", "webRequestBlocking"],
+    "version": "2.4.0",
+    "web_accessible_resources": [ "images/*" ],
+    "commands": {
+        "play_next": {
+            "suggested_key": {
+                "default": "MediaNextTrack"
+            },
+            "description": "Play next song.",
+            "global": true
+        },
+        "play_prev": {
+            "suggested_key": {
+                "default": "MediaPrevTrack"
+            },
+            "description": "Play previous song.",
+            "global": true
+        },
+        "play_pause": {
+            "suggested_key": {
+                "default": "MediaPlayPause"
+            },
+            "description": "Toggle play pause state.",
+            "global": true
+        }
+    },
+    "content_scripts": [{
+      "matches": ["https://listen1.github.io/listen1/*"],
+      "js": ["js/oauth_callback.js"]
+    }]
 }
